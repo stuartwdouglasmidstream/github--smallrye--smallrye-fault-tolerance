@@ -1,40 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <parent>
-        <artifactId>smallrye-fault-tolerance-parent</artifactId>
-        <groupId>io.smallrye</groupId>
-        <version>6.3.0</version>
-    </parent>
-
-    <artifactId>smallrye-fault-tolerance-testsuite-parent</artifactId>
-    <packaging>pom</packaging>
-
-    <name>SmallRye Fault Tolerance: Test Suite Parent</name>
-
-    <modules>
-        <module>basic</module>
-        <module>integration</module>
-        <module>tck</module>
-    </modules>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <configuration>
-                    <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>io.smallrye</groupId>
+    <artifactId>smallrye-fault-tolerance-parent</artifactId>
+    <version>6.3.0</version>
+  </parent>
+  <artifactId>smallrye-fault-tolerance-testsuite-parent</artifactId>
+  <packaging>pom</packaging>
+  <name>SmallRye Fault Tolerance: Test Suite Parent</name>
+  <modules>
+    <module>basic</module>
+    <module>integration</module>
+    <module>tck</module>
+  </modules>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
